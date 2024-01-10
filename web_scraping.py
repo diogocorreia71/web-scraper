@@ -6,7 +6,7 @@ marca = input("Qual a marca do carro? ")
 modelo = input("Qual o modelo do carro? ")
 valor = input("Qual o valor máximo? ")
 
-url = f"https://www.standvirtual.com/carros/{marca}/{modelo}?search%5Bfilter_float_price%3Ato%5D={valor}&search%5Border%5D=created_at_first%3Adesc"
+url = f"https://www.standvirtual.com/carros/{marca}/{modelo}?search%5Bfilter_float_price%3Ato%5D={valor}&search%5Border%5D=created_at_first%3Adesc&search[private_business]=business&search[advanced_search_expanded]=true"
 page = requests.get(url).text
 doc = BeautifulSoup(page, "html.parser")
 
