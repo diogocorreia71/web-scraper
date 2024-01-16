@@ -8,7 +8,7 @@ import json
 
 # email
 sender_email = "diogo_correia7@hotmail.com"
-sender_password = "***********"
+sender_password = "**********"
 
 receiver_email = "diogo_correia7@hotmail.com"
 
@@ -46,7 +46,7 @@ for _ in range(num_searches):
         link_href = link.find('a')['href']
         price_text = price.get_text(strip=True)
         new_results_list.append({
-            "Marca e modelo": link_name,
+            "Marca e modelo": link_name,	
             "Link": link_href,
             "Preço": price_text
 		})
@@ -76,7 +76,7 @@ if new_results:
     print("Email sent succesfully!")
     
 	# Update the stored data with the new results
-    existing_data.update({result["Marca e modelo"]: result for result in new_results.values()})
+    existing_data.update({result["Link"]: result for result in new_results.values()})
     with open(data_file, "w") as file:
         json.dump(existing_data, file)
     
