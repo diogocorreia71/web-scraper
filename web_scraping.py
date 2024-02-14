@@ -8,7 +8,7 @@ import json
 
 # email
 sender_email = "diogo_correia7@hotmail.com"
-sender_password = "**********"
+sender_password = "************"
 
 receiver_email = "diogo_correia7@hotmail.com"
 
@@ -34,7 +34,7 @@ for _ in range(num_searches):
     marca = input("Qual a marca do carro? ")
     modelo = input("Qual o modelo do carro? ")
     valor = input("Qual o valor máximo? ")
-    url = f"https://www.standvirtual.com/carros/{marca}/{modelo}?search%5Bfilter_float_price%3Ato%5D={valor}&search%5Border%5D=created_at_first%3Adesc&search[private_business]=business&search[advanced_search_expanded]=true"
+    url = f"https://www.standvirtual.com/carros/{marca}/{modelo}/portocity?search%5Bdist%5D=75&search%5Bfilter_float_price%3Ato%5D={valor}&search%5Border%5D=created_at_first%3Adesc&search%5Bprivate_business%5D=business&search%5Badvanced_search_expanded%5D=true"
     page = requests.get(url).text
     doc = BeautifulSoup(page, "html.parser")
     links = doc.find_all(class_="e1oqyyyi9 ooa-1ed90th er34gjf0")
