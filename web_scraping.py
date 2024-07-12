@@ -7,10 +7,10 @@ from email.mime.multipart import MIMEMultipart
 import json
 
 # email
-sender_email = "diogo_correia7@hotmail.com"
-sender_password = "************"
+sender_email = # your email
+sender_password = # your password
 
-receiver_email = "diogo_correia7@hotmail.com"
+receiver_email = # receiver email
 
 data_file = "scraped_data.json"
 
